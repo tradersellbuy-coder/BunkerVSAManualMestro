@@ -94,7 +94,7 @@ def verificar_bloqueo_noticias():
             datetime(ahora.year, ahora.month, ahora.day, 20, 00)  
         ]
         for hora_noticia in noticias_alto_impacto_usd:
-diferencia_minutos = (hora_noticia - ahora).total_seconds() / 60.0
+            diferencia_minutos = (hora_noticia - ahora).total_seconds() / 60.0
             if -15 <= diferencia_minutos <= 15:
                 print(f"⚠️ ESCUDO MACRO: Operativa pausada por noticia USD cercana.")
                 return True
